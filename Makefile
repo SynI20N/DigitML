@@ -2,7 +2,7 @@
  -Winit-self -Wmissing-declarations -Wredundant-decls -Wshadow\
  -Wstrict-overflow=5 -Wswitch-default -Wundef
 
-FLAGS = $(WARNINGS) -std=c++11
+FLAGS = $(WARNINGS) -std=c++14
 
 SRC = src/main.cpp
 
