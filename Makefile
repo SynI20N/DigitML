@@ -15,6 +15,9 @@ bent_identity:
 test:
 	g++ $(FLAGS) -DTESTS -Ofast $(SRC) -I include -o main -lgtest
 
+coverage:
+	g++ $(FLAGS) -DTESTS -fprofile-arcs -ftest-coverage -O0 -g $(SRC) -I include -o main -lgtest
+
 all: sigmoid
 
 debug:
