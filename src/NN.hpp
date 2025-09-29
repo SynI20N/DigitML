@@ -41,6 +41,8 @@ class NeuralNetwork {
         std::vector<double> sigmoid(const std::vector<double>& x);
         std::vector<double> bent_identity(const std::vector<double>& x);
         std::vector<double> sigmoid_prime(const std::vector<double>& x);
+        std::vector<double> isru(const std::vector<double>& x);
+        std::vector<double> isru_prime(const std::vector<double>& x);
 };
 
 #include "NN.cpp"
