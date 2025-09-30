@@ -1,3 +1,6 @@
+[![C/C++ CI](https://github.com/SynI20N/DigitML/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/SynI20N/DigitML/actions/workflows/c-cpp.yml)
+[![Test Coverage](https://codecov.io/gh/SynI20N/DigitML/branch/master/graph/badge.svg)](https://codecov.io/gh/SynI20N/DigitML)
+
 # Щербаков Леонид КС-40
 
 # DigitML

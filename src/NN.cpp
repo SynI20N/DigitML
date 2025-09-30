@@ -143,6 +143,8 @@ inline std::vector<double> NeuralNetwork::feed_forward(
         const Matrix<double>& weights) {
     #ifdef PERS
         return bent_identity(weights * input);
+    #elif ISRU
+        return isru(weights * input);
     #else
         return sigmoid(weights * input);
     #endif
@@ -201,6 +203,14 @@ std::vector<double> NeuralNetwork::sigmoid_prime(const std::vector<double>& x) {
     for (unsigned int i = 0; i < result.size(); i++) {
         const double t = exp(x[i]);
         result[i] = t / ((1 + t) * (1 + t));
+    }
+    return result;
+}
+
+std::vector<double> NeuralNetwork::isru(const std::vector<double>& x) {
+    std::vector<double> result(x.size());
+    for (unsigned int i = 0; i < result.size(); i++) {
+        result[i] = x[i] / sqrt(1 + ALPHA * pow(x[i], 2));
     }
     return result;
 }

@@ -12,6 +12,9 @@ sigmoid:
 bent_identity:
 	g++ $(FLAGS) -DPERS -Ofast $(SRC) -I include -o main
 
+isru:
+	g++ $(FLAGS) -DISRU -Ofast $(SRC) -I include -o main
+
 test:
 	g++ $(FLAGS) -DTESTS -Ofast $(SRC) -I include -o main -lgtest
 
