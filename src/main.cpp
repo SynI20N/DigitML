@@ -73,8 +73,8 @@ TEST(FunctionTesting, test_sigmoid_comp) {
 
 TEST(FunctionTesting, test_isru_equal) {
     std::vector<double> t1 = {-1, -2, 0, 5};
-    std::vector<double> t2 = {-0.995, -1.961, 0, 4,472};
-    for(size_t i = 0; i < t1.size() i++)
+    std::vector<double> t2 = {-0.995, -1.961, 0, 4.472};
+    for(size_t i = 0; i < t1.size(); i++)
     {
         EXPECT_NEAR(n.isru(t1)[i], t2[i], 1e-3);
     }
@@ -82,8 +82,8 @@ TEST(FunctionTesting, test_isru_equal) {
 
 TEST(FunctionTesting, test_isru_load) {
     std::vector<double> t1(10000, 4000.5632);
-    std::vector<double> t2(10000, 624.7401)
-    for(size_t i = 0; i < t1.size() i++)
+    std::vector<double> t2(10000, 9.999968);
+    for(size_t i = 0; i < t1.size(); i++)
     {
         EXPECT_NEAR(n.isru(t1)[i], t2[i], 1e-3);
     }
@@ -91,7 +91,7 @@ TEST(FunctionTesting, test_isru_load) {
 
 TEST(FunctionTesting, test_isru_special) {
     std::vector<double> t1;
-    EXCEPT_EQ(n.isru(t1).size(), 0);
+    EXPECT_EQ(n.isru(t1).size(), 0);
 }
 
 #endif
